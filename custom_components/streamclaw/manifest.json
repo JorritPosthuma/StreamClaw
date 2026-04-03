@@ -1,0 +1,12 @@
+{
+  "domain": "streamclaw",
+  "name": "StreamClaw",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["conversation"],
+  "documentation": "https://github.com/jorrit/StreamClaw",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "requirements": ["voluptuous-openapi==0.0.6"],
+  "version": "1.0.0"
+}

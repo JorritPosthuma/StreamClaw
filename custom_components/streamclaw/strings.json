@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to OpenClaw",
+        "description": "Enter the connection details for your OpenClaw instance.",
+        "data": {
+          "base_url": "Base URL",
+          "api_key": "API Key"
+        },
+        "data_description": {
+          "base_url": "The URL of your OpenClaw gateway (e.g. http://localhost:8080).",
+          "api_key": "Your OpenClaw API key for authentication."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to OpenClaw. Check the URL and ensure the service is running.",
+      "invalid_auth": "Authentication failed. Check your API key.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This OpenClaw instance is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "StreamClaw Options",
+        "data": {
+          "chat_model": "Model",
+          "prompt": "System prompt",
+          "timeout": "Request timeout (seconds)",
+          "max_tokens": "Maximum response tokens",
+          "llm_hass_api": "LLM API for device control"
+        },
+        "data_description": {
+          "chat_model": "The model identifier to use (e.g. 'default', 'llama3').",
+          "prompt": "Custom instructions prepended to every conversation.",
+          "llm_hass_api": "Select an LLM API to allow StreamClaw to control Home Assistant devices, or leave empty to disable."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "authentication_error": {
+      "message": "Authentication failed with OpenClaw. Check your API key."
+    },
+    "api_error": {
+      "message": "OpenClaw API returned status {status}."
+    },
+    "connection_error": {
+      "message": "Could not connect to OpenClaw: {message}"
+    }
+  }
+}
